@@ -1,5 +1,5 @@
 import Link from 'next/link';
-
+import Search from 'components/layout/navbar/search';
 import FooterMenu from 'components/layout/footer-menu';
 import LogoSquare from 'components/logo-square';
 import { getMenu } from 'lib/shopify';
@@ -35,7 +35,11 @@ export default async function Footer() {
             </div>
           }
         >
+          
           <FooterMenu menu={menu} />
+          <Search />
+          
+          
         </Suspense>
         <div className="md:ml-auto">
           <a

@@ -20,7 +20,7 @@ export function Gallery({ images }: { images: { src: string; altText: string }[]
 
   return (
     <form>
-      <div className="relative aspect-square h-full max-h-[550px] w-full overflow-hidden  bg-cyan-500 ">
+      <div className="relative aspect-square h-full max-h-[550px] w-full overflow-hidden   ">
         {images[imageIndex] && (
           <Image
             className="h-full w-full object-contain "

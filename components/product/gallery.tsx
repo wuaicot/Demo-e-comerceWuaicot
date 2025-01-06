@@ -5,6 +5,8 @@ import { GridTileImage } from 'components/grid/tile';
 import { useProduct, useUpdateURL } from 'components/product/product-context';
 import Image from 'next/image';
 
+
+
 export function Gallery({ images }: { images: { src: string; altText: string }[] }) {
   const { state, updateImage } = useProduct();
   const updateURL = useUpdateURL();
@@ -18,10 +20,10 @@ export function Gallery({ images }: { images: { src: string; altText: string }[]
 
   return (
     <form>
-      <div className="relative aspect-square h-full max-h-[550px] w-full overflow-hidden">
+      <div className="relative aspect-square h-full max-h-[550px] w-full overflow-hidden  bg-cyan-500 ">
         {images[imageIndex] && (
           <Image
-            className="h-full w-full object-contain"
+            className="h-full w-full object-contain "
             fill
             sizes="(min-width: 1024px) 66vw, 100vw"
             alt={images[imageIndex]?.altText as string}
@@ -31,8 +33,8 @@ export function Gallery({ images }: { images: { src: string; altText: string }[]
         )}
 
         {images.length > 1 ? (
-          <div className="absolute bottom-[15%] flex w-full justify-center">
-            <div className="mx-auto flex h-11 items-center rounded-full border border-white bg-neutral-50/80 text-neutral-500 backdrop-blur dark:border-black dark:bg-neutral-900/80">
+          <div className="absolute bottom-[15%] flex w-full justify-center ">
+            <div className="mx-auto flex h-11 items-center rounded-full border border-white bg-neutral-50/5 text-neutral-500 backdrop-blur dark:border-black dark:bg-neutral-900/5 ">
               <button
                 formAction={() => {
                   const newState = updateImage(previousImageIndex.toString());
@@ -52,7 +54,7 @@ export function Gallery({ images }: { images: { src: string; altText: string }[]
                 aria-label="Next product image"
                 className={buttonClassName}
               >
-                <ArrowRightIcon className="h-5" />
+                <ArrowRightIcon className="h-5 " />
               </button>
             </div>
           </div>

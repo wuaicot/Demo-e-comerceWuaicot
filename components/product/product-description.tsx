@@ -16,6 +16,7 @@ export function ProductDescription({ product }: { product: Product }) {
           />
         </div>
       </div>
+      
       <VariantSelector options={product.options} variants={product.variants} />
       {product.descriptionHtml ? (
         <Prose
